@@ -1,0 +1,330 @@
+<!-- nosotros.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - JStudio & CO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        :root {
+            --primary: #e30613;
+            --dark: #0b0d10;
+            --secondary: #12151b;
+            --text: #e6e9ef;
+            --text-secondary: #a7b0bd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--dark);
+            color: var(--text);
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            z-index: 1000;
+            transition: 0.3s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(18, 21, 27, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 180px;
+            filter: drop-shadow(0 0 8px rgba(227, 6, 19, 0.3));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: -5px;
+            left: 0;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 8rem 5% 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Features Grid */
+        .features-section {
+            padding: 6rem 5%;
+            background: var(--secondary);
+        }
+
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            padding: 2.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 6rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .team-member h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-content {
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <img src="https://images.unsplash.com/photo-1584438784894-089d73352e82?auto=format&fit=crop&w=300&q=80" alt="JStudio Logo" class="logo">
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="recorridos.html">Recorridos</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <h1 class="section-title" data-aos="fade-right">Sobre Nosotros</h1>
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+                <p>JStudio & CO es una empresa de diseño arquitectónico que se dedica a crear espacios únicos y funcionales para sus clientes, utilizando las últimas tecnologías y herramientas. Ofrecemos una amplia gama de servicios, desde diseños virtuales hasta planes residenciales, comerciales, industriales y paisajismo.</p>
+                <p>Nuestra filosofía es que el pensamiento es el diseño, y por eso plasmamos las ideas en realidad con creatividad, elegancia y modernidad. Contamos con un equipo de profesionales cualificados y experimentados que se encargan de todo el proceso de diseño, desde la concepción hasta la ejecución.</p>
+                <p>Nuestro trabajo se caracteriza por su calidad, eficiencia y satisfacción del cliente, como se puede apreciar en su portfolio de imágenes.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1578902285826-c86d7334a052?auto=format&fit=crop&w=800&q=80" alt="Equipo JStudio" class="about-image" data-aos="fade-left" data-aos-delay="400">
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="features-grid">
+            <div class="feature-card" data-aos="zoom-in">
+                <div class="feature-icon">🏗️</div>
+                <h3>Arquitectura Residencial</h3>
+                <p>Diseños personalizados que reflejan tu estilo de vida</p>
+            </div>
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="feature-icon">🏢</div>
+                <h3>Desarrollos Inmobiliarios</h3>
+                <p>Proyectos que optimizan costos y tiempos</p>
+            </div>
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="feature-icon">🏠</div>
+                <h3>Arquitectura Modular</h3>
+                <p>Soluciones prefabricadas rápidas y eficientes</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2 class="section-title" data-aos="fade-up">Nuestro Equipo</h2>
+        <div class="team-grid">
+            <div class="team-member" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=600&q=80" alt="Arquitecto Principal" class="member-img">
+                <h3>Nombre del Arquitecto</h3>
+                <p>Arquitecto Principal</p>
+            </div>
+            <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1573496357466-bd0295522164?auto=format&fit=crop&w=600&q=80" alt="Diseñadora Senior" class="member-img">
+                <h3>Nombre del Diseñador</h3>
+                <p>Diseñadora Senior</p>
+            </div>
+            <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://images.unsplash.com/photo-1580489944761-15d19a3acc4e?auto=format&fit=crop&w=600&q=80" alt="Ingeniero Estructural" class="member-img">
+                <h3>Nombre del Ingeniero</h3>
+                <p>Ingeniero Estructural</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
