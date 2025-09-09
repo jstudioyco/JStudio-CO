@@ -1,0 +1,60 @@
+{
+  "page_title": "Nuestros Servicios",
+  "hero_image": "/images/services-hero.jpg",
+  "services_list": [
+    {
+      "title": "Planos Técnicos",
+      "description": "Documentación técnica precisa y detallada para todo tipo de proyectos",
+      "icon": "/images/services/planos-icon.svg",
+      "image": "/images/services/planos.jpg",
+      "gallery": ["/images/services/planos1.jpg", "/images/services/planos2.jpg"]
+    },
+    {
+      "title": "Renders 3D",
+      "description": "Visualizaciones hiperrealistas con tecnología BIM",
+      "icon": "/images/services/renders-icon.svg",
+      "image": "/images/services/renders.jpg",
+      "gallery": ["/images/services/renders1.jpg", "/images/services/renders2.jpg"]
+    },
+    {
+      "title": "Recorridos Virtuales",
+      "description": "Experiencias inmersivas para visualizar el proyecto terminado",
+      "icon": "/images/services/recorridos-icon.svg",
+      "image": "/images/services/recorridos.jpg",
+      "gallery": ["/images/services/recorrido1.jpg", "/images/services/recorrido2.jpg"]
+    },
+    {
+      "title": "Diseño Residencial",
+      "description": "Espacios personalizados que reflejan tu estilo y necesidades",
+      "icon": "/images/services/residencial-icon.svg",
+      "image": "/images/services/residencial.jpg",
+      "gallery": ["/images/services/res1.jpg", "/images/services/res2.jpg"]
+    }
+  ],
+  "process_steps": [
+    {
+      "step_number": 1,
+      "step_title": "Análisis de objetivos",
+      "step_description": "Análisis de objetivos y viabilidad del proyecto",
+      "step_icon": "/images/icons/step1.svg"
+    },
+    {
+      "step_number": 2,
+      "step_title": "Propuesta personalizada",
+      "step_description": "Propuesta personalizada con renders para visualización",
+      "step_icon": "/images/icons/step2.svg"
+    },
+    {
+      "step_number": 3,
+      "step_title": "Documentación técnica",
+      "step_description": "Planos técnicos y gestión de trámites municipales",
+      "step_icon": "/images/icons/step3.svg"
+    },
+    {
+      "step_number": 4,
+      "step_title": "Control de calidad",
+      "step_description": "Control de calidad y plazos de construcción",
+      "step_icon": "/images/icons/step4.svg"
+    }
+  ]
+}

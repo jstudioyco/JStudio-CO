@@ -1,0 +1,17 @@
+{
+  "hero_title": "Arquitectura que Transforma",
+  "hero_description": "Diseñamos espacios que no solo inspiran, sino que optimizan cada metro cuadrado. Desde la conceptualización hasta la entrega final, garantizamos precisión técnica y estética vanguardista.",
+  "hero_image": "/images/hero-architecture.jpg",
+  "cta_button_text": "Solicitar Propuesta Personalizada",
+  "logo": "/images/jstudio-logo.png",
+  "stats": {
+    "experience_years": 15,
+    "experience_text": "Años de experiencia transformando ideas en obras maestras",
+    "experience_icon": "/images/icons/experience.svg",
+    "structures_count": 200,
+    "structures_text": "Estructuras integradas que maximizan eficiencia y reducen costos",
+    "structures_icon": "/images/icons/structures.svg",
+    "renders_text": "Renders y recorridos virtuales que anticipan la realidad",
+    "renders_icon": "/images/icons/renders.svg"
+  }
+}

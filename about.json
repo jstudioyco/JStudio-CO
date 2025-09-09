@@ -1,0 +1,43 @@
+{
+  "page_title": "Nosotros",
+  "hero_image": "/images/about-hero.jpg",
+  "company_description": "JStudio & CO es una empresa de diseño arquitectónico que se dedica a crear espacios únicos y funcionales para sus clientes, utilizando las últimas tecnologías y herramientas. Ofrecemos una amplia gama de servicios, desde diseños virtuales hasta planes residenciales, comerciales, industriales y paisajismo.",
+  "philosophy": "Nuestra filosofía es que el pensamiento es el diseño, y por eso plasmamos las ideas en realidad con creatividad, elegancia y modernidad.",
+  "values": [
+    {
+      "title": "Calidad",
+      "description": "Excelencia en cada detalle",
+      "icon": "/images/icons/quality.svg"
+    },
+    {
+      "title": "Eficiencia",
+      "description": "Optimización de recursos y tiempos",
+      "icon": "/images/icons/efficiency.svg"
+    },
+    {
+      "title": "Innovación",
+      "description": "Tecnología y creatividad",
+      "icon": "/images/icons/innovation.svg"
+    }
+  ],
+  "team": [
+    {
+      "name": "Arquitecto Principal",
+      "position": "Director de Diseño",
+      "photo": "/images/team/arquitecto.jpg",
+      "bio": "Líder con 20 años de experiencia en proyectos internacionales."
+    },
+    {
+      "name": "Diseñadora Senior",
+      "position": "Especialista en Interiores",
+      "photo": "/images/team/disenadora.jpg",
+      "bio": "Creatividad y pasión por el detalle en cada espacio."
+    },
+    {
+      "name": "Ingeniero Estructural",
+      "position": "Análisis y Cálculos",
+      "photo": "/images/team/ingeniero.jpg",
+      "bio": "Experto en garantizar seguridad y solidez en estructuras."
+    }
+  ]
+}

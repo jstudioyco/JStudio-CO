@@ -1,0 +1,39 @@
+{
+  "page_title": "Noticias y Actualidades",
+  "hero_image": "/images/news-hero.jpg",
+  "articles": [
+    {
+      "date": "2025-09-15",
+      "title": "Nuevas tendencias en arquitectura minimalista",
+      "summary": "Descubre las últimas innovaciones en diseño minimalista y cómo están transformando los espacios habitacionales...",
+      "content": "Texto completo del artículo sobre arquitectura minimalista.",
+      "featured_image": "/images/news/minimalista.jpg",
+      "thumbnail": "/images/news/thumb-minimalista.jpg",
+      "category": "Tendencias",
+      "author": { "name": "Ana Pérez", "photo": "/images/authors/ana.jpg" },
+      "read_more_link": "/noticias/arquitectura-minimalista"
+    },
+    {
+      "date": "2025-09-10",
+      "title": "Construcción sostenible: el futuro es verde",
+      "summary": "Análisis de los materiales y técnicas más eficientes para reducir la huella ambiental en proyectos arquitectónicos...",
+      "content": "Texto completo del artículo sobre construcción sostenible.",
+      "featured_image": "/images/news/sostenible.jpg",
+      "thumbnail": "/images/news/thumb-sostenible.jpg",
+      "category": "Sostenibilidad",
+      "author": { "name": "Luis Gómez", "photo": "/images/authors/luis.jpg" },
+      "read_more_link": "/noticias/construccion-sostenible"
+    },
+    {
+      "date": "2025-09-05",
+      "title": "BIM: Revolucionando la arquitectura moderna",
+      "summary": "Cómo la modelación BIM está revolucionando la forma de concebir y ejecutar proyectos de gran escala...",
+      "content": "Texto completo del artículo sobre BIM.",
+      "featured_image": "/images/news/bim.jpg",
+      "thumbnail": "/images/news/thumb-bim.jpg",
+      "category": "Tecnología",
+      "author": { "name": "María Ruiz", "photo": "/images/authors/maria.jpg" },
+      "read_more_link": "/noticias/bim-arquitectura"
+    }
+  ]
+}

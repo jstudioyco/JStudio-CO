@@ -1,0 +1,15 @@
+{
+  "page_title": "Contáctanos",
+  "hero_image": "/images/contact-hero.jpg",
+  "contact_info": {
+    "phone": "+51 943 123 456",
+    "email": "contacto@jstudioco.com",
+    "address": "Av. Arquitectura 123, Nuevo Chimbote, Ancash, Perú",
+    "office_hours": "Lunes a Viernes: 8:00 AM - 6:00 PM"
+  },
+  "office_images": [
+    { "image": "/images/contact/office1.jpg", "description": "Recepción" },
+    { "image": "/images/contact/office2.jpg", "description": "Sala de reuniones" }
+  ],
+  "map_image": "/images/contact/mapa.jpg"
+}

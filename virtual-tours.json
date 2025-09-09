@@ -1,0 +1,20 @@
+{
+  "page_title": "Recorridos Virtuales",
+  "hero_image": "/images/virtual-hero.jpg",
+  "tours_list": [
+    {
+      "title": "Tour 360° Residencial",
+      "description": "Recorrido completo del proyecto residencial en 360°.",
+      "preview_image": "/images/virtual/residencial-preview.jpg",
+      "tour_url": "https://tour.example.com/residencial",
+      "category": "Residencial"
+    },
+    {
+      "title": "Tour Comercial",
+      "description": "Visita virtual a nuestro diseño de espacio comercial.",
+      "preview_image": "/images/virtual/comercial-preview.jpg",
+      "tour_url": "https://tour.example.com/comercial",
+      "category": "Comercial"
+    }
+  ]
+}

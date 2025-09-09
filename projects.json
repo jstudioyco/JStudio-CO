@@ -1,0 +1,23 @@
+{
+  "page_title": "Nuestros Proyectos",
+  "hero_image": "/images/projects-hero.jpg",
+  "projects_list": [
+    {
+      "title": "Residencial Buenos Aires",
+      "description": "Diseño de 12 unidades residenciales en Buenos Aires con enfoque en optimización de costos y tiempos de construcción. El proyecto incluye arquitectura minimalista, sistemas de eficiencia energética y espacios comunes que fomentan la comunidad.",
+      "location": "Buenos Aires, Argentina",
+      "category": "Residencial",
+      "featured_image": "/images/projects/residencial-ba.jpg",
+      "gallery": [
+        { "image": "/images/projects/ba1.jpg", "caption": "Vista exterior" },
+        { "image": "/images/projects/ba2.jpg", "caption": "Área común" }
+      ],
+      "technical_specs": {
+        "area": "2,500 m²",
+        "year": 2024,
+        "client": "Grupo Inmobiliario BA"
+      },
+      "details_link": "/proyectos/residencial-buenos-aires"
+    }
+  ]
+}
