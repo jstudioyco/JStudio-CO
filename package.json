@@ -1,0 +1,22 @@
+{
+  "name": "jstudio-co",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
+    "build": "tinacms build && next build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tinacms": "^2.8.2"
+  },
+  "devDependencies": {
+    "@stackbit/types": "^2.1.14",
+    "@tinacms/cli": "^1.10.2",
+    "@types/node": "^24.3.1"
+  }
+}

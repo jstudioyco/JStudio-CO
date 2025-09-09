@@ -1,0 +1,345 @@
+<!-- servicios.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - JStudio & CO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        :root {
+            --primary: #e30613;
+            --dark: #0b0d10;
+            --secondary: #12151b;
+            --text: #e6e9ef;
+            --text-secondary: #a7b0bd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--dark);
+            color: var(--text);
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            z-index: 1000;
+            transition: 0.3s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(18, 21, 27, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 180px;
+            filter: drop-shadow(0 0 8px rgba(227, 6, 19, 0.3));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: -5px;
+            left: 0;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Service Section */
+        .service-section {
+            padding: 8rem 5% 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            margin-top: 3rem;
+        }
+
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateX(10px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .check-icon {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-right: 1rem;
+        }
+
+        .service-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            object-fit: cover;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 6rem 5%;
+            background: var(--secondary);
+        }
+
+        .process-steps {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            transition: 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .step-number {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .process-step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .service-grid {
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <img src="https://images.unsplash.com/photo-1584438784894-089d73352e82?auto=format&fit=crop&w=300&q=80" alt="JStudio Logo" class="logo">
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="recorridos.html">Recorridos</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="service-section">
+        <h1 class="section-title" data-aos="fade-right">Nuestros Servicios</h1>
+        <div class="service-grid">
+            <div class="service-list">
+                <div class="service-item" data-aos="fade-right">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h3>Planos Arquitectónicos</h3>
+                        <p>Documentación técnica precisa y detallada para todo tipo de proyectos</p>
+                    </div>
+                </div>
+                <div class="service-item" data-aos="fade-right" data-aos-delay="100">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h3>Modelos 3D</h3>
+                        <p>Visualizaciones hiperrealistas con tecnología BIM</p>
+                    </div>
+                </div>
+                <div class="service-item" data-aos="fade-right" data-aos-delay="200">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h3>Recorridos Virtuales</h3>
+                        <p>Experiencias inmersivas para visualizar el proyecto terminado</p>
+                    </div>
+                </div>
+                <div class="service-item" data-aos="fade-right" data-aos-delay="300">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h3>Diseño Interior</h3>
+                        <p>Espacios personalizados que reflejan tu estilo y necesidades</p>
+                    </div>
+                </div>
+                <div class="service-item" data-aos="fade-right" data-aos-delay="400">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h3>Paisajismo</h3>
+                        <p>Diseño de áreas verdes que integren estética y funcionalidad</p>
+                    </div>
+                </div>
+                <div class="service-item" data-aos="fade-right" data-aos-delay="500">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h3>Diseño Comercial</h3>
+                        <p>Espacios que capturan la esencia de tu marca y atraen clientes</p>
+                    </div>
+                </div>
+                <div class="service-item" data-aos="fade-right" data-aos-delay="600">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h3>Diseño Industrial</h3>
+                        <p>Soluciones eficientes para procesos productivos y logísticos</p>
+                    </div>
+                </div>
+                <div class="service-item" data-aos="fade-right" data-aos-delay="700">
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <h3>Proyectos Ejecutivos</h3>
+                        <p>Documentación completa para permisos y construcción</p>
+                    </div>
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1584438784894-089d73352e82?auto=format&fit=crop&w=800&q=80" alt="Servicios" class="service-image" data-aos="fade-left">
+        </div>
+    </section>
+
+    <section class="process-section">
+        <h2 class="section-title" data-aos="fade-up">Nuestro Proceso</h2>
+        <div class="process-steps">
+            <div class="process-step" data-aos="zoom-in">
+                <div class="step-number">1</div>
+                <h3>Consulta Inicial</h3>
+                <p>Análisis de objetivos y viabilidad del proyecto</p>
+            </div>
+            <div class="process-step" data-aos="zoom-in" data-aos-delay="200">
+                <div class="step-number">2</div>
+                <h3>Anteproyecto</h3>
+                <p>Propuesta personalizada con renders para visualización</p>
+            </div>
+            <div class="process-step" data-aos="zoom-in" data-aos-delay="400">
+                <div class="step-number">3</div>
+                <h3>Proyecto Ejecutivo</h3>
+                <p>Planos técnicos y gestión de trámites municipales</p>
+            </div>
+            <div class="process-step" data-aos="zoom-in" data-aos-delay="600">
+                <div class="step-number">4</div>
+                <h3>Dirección de Obra</h3>
+                <p>Control de calidad y plazos de construcción</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
